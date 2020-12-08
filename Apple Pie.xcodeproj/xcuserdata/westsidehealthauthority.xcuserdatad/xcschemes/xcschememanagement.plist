@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Copy of Apple Pie.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F8A9BB492574921700225808</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8A9BB622574921D00225808</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8A9BB6D2574921D00225808</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F869D55425776B7800F323FE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869D55325776B7800F323FE /* Game.swift */; };
 		F8A9BB4E2574921700225808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A9BB4D2574921700225808 /* AppDelegate.swift */; };
 		F8A9BB502574921700225808 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A9BB4F2574921700225808 /* SceneDelegate.swift */; };
 		F8A9BB522574921700225808 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A9BB512574921700225808 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F869D55325776B7800F323FE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		F8A9BB4A2574921700225808 /* Apple Pie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Pie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A9BB4D2574921700225808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8A9BB4F2574921700225808 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				F8A9BB4D2574921700225808 /* AppDelegate.swift */,
 				F8A9BB4F2574921700225808 /* SceneDelegate.swift */,
 				F8A9BB512574921700225808 /* ViewController.swift */,
+				F869D55325776B7800F323FE /* Game.swift */,
 				F8A9BB532574921700225808 /* Main.storyboard */,
 				F8A9BB592574921D00225808 /* Assets.xcassets */,
 				F8A9BB5B2574921D00225808 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A9BB522574921700225808 /* ViewController.swift in Sources */,
+				F869D55425776B7800F323FE /* Game.swift in Sources */,
 				F8A9BB582574921700225808 /* Apple_Pie.xcdatamodeld in Sources */,
 				F8A9BB4E2574921700225808 /* AppDelegate.swift in Sources */,
 				F8A9BB502574921700225808 /* SceneDelegate.swift in Sources */,
@@ -443,6 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6W2G2C3992;
 				INFOPLIST_FILE = "Apple Pie/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "InspireTheNXT.Apple-Pie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -462,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6W2G2C3992;
 				INFOPLIST_FILE = "Apple Pie/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,7 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "InspireTheNXT.Apple-Pie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
