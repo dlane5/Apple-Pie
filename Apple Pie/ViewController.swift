@@ -7,11 +7,11 @@
 
 import UIKit
 
-var listOfWords = ["cake", "walking", "animals", "household objects", "love", "bank"]
+var listOfWords = ["cake", "walking", "animals", "Table", "love", "bank"]
 let incorrectMoveAllowed = 7
 
-var totalWins = 0
-var totalLosses = 0
+
+
 
 class ViewController: UIViewController {
 
@@ -20,9 +20,48 @@ class ViewController: UIViewController {
         let letterString = sender.title(for: . normal)!
         let letter = Character(letterString.lowercased())
         currentGame.playerGuessed(letter: letter)
+        updateGameState()
+    }
+    
+    func enableLetterButton(_ enable: Bool) {
+        for button in letterButtons {
+            button.isEnabled = enable
+        }
+    }
+    
+    func updateGameState() {
+        if currentGame.incorrectMovesRemaining == 0 {
+            totalLosses += 1
+        } else if currentGame.word == currentGame.formattedWord {
+        totalWins += 1
+        }else {
         updateUI()
+        }
+    }
+    
+    func newRound() {
+        if !listOfWords.isEmpty {
+            let newWord = listOfWords.removeFirst()
+            currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMoveAllowed, guessedLetters: [])
+            enableLetterButton(true)
+            updateUI()
+        } else {
+            enableLetterButton(false)
+        }
+    }
+    
+    var totalWins = 0 {
+        didSet {
+        newRound()
+        }
+    }
+    var totalLosses = 0 {
+        didSet {
+        newRound()
+        }
     }
 
+   
     
 @IBOutlet var letterButtons: [UIButton]!
     
@@ -39,14 +78,20 @@ class ViewController: UIViewController {
     }
     var currentGame: Game!
     
-    func newRound () {
+  /*  func newRound() {
         let newWord = listOfWords.removeFirst()
         currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMoveAllowed, guessedLetters: [])
         updateUI()
     
-}
+} */
+    
     func updateUI() {
-        correctWordLabel.text = currentGame.formattedWord
+         var letters = [String]()
+        for letter in currentGame.formattedWord {
+            letters.append(String(letter))
+        }
+        let wordWithSpacing = letters.joined(separator: " ")
+        correctWordLabel.text = wordWithSpacing
         scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
         treeImageView.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
     }
